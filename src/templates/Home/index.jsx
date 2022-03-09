@@ -62,6 +62,11 @@ export class Home extends Component {
           );
         })
       : posts; //se não tiver algo no searchValue, eu retorno os posts normal
+
+    fetch(process.env.REACT_APP_API_URL || "http://localhost:8080/api/v1")
+      .then(() => console.log("Deu certo"))
+      .catch(() => console.log("Deu erro"));
+
     return (
       <section className="container">
         <div className="search-container">
